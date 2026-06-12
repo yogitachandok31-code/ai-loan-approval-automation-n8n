@@ -1,202 +1,179 @@
 # 🏦 AI Loan Approval Automation System
 
 <p align="center">
-Loan Risk Assessment • Automated Decision Engine • Gmail Notifications • n8n Workflow Automation
+  <b>n8n • Google Sheets • Gmail Automation • Credit Risk Assessment</b>
 </p>
 
 ---
 
-## 📌 Project Overview
+## 📌 Overview
 
-AI Loan Approval Automation is a rule-based lending workflow that automatically evaluates loan applications, assigns approval decisions, and sends email notifications using n8n.
+AI Loan Approval Automation is a workflow automation project that evaluates loan applications using predefined risk assessment rules and automatically sends decision emails to applicants.
 
-The system analyzes financial and risk indicators such as:
+The workflow reads application data from Google Sheets, evaluates applicant risk profiles, categorizes applications, and triggers Gmail notifications.
 
-- Annual Income
-- Loan Amount
-- Credit Score
-- Debt-to-Income Ratio
-- Watchlist Match Percentage
+### Decision Categories
 
-Based on predefined business rules, applications are automatically categorized as:
-
-✅ Approved
-
-⚠️ Review Required
-
-❌ Rejected
+* ✅ Approved
+* ⚠️ Review Required
+* ❌ Rejected
 
 ---
 
 ## 🚀 Key Features
 
-### 📊 Automated Risk Assessment
-
-- Credit Score Evaluation
-- Debt-to-Income Analysis
-- Loan Affordability Checks
-- Watchlist Screening
-
-### ⚡ Decision Engine
-
-Automatically generates:
-
-- Approved
-- Review Required
-- Rejected
-
-decisions using business rules.
-
-### 📧 Automated Gmail Notifications
-
-The workflow automatically sends:
-
-- Loan Approval Emails
-- Compliance Review Requests
-- Rejection Notifications
-
-### 📋 Google Sheets Integration
-
-- Application Data Storage
-- Risk Analysis
-- Decision Tracking
-
-### 🔄 Workflow Automation
-
-End-to-end automation from application review to email notification.
+* Automated Loan Screening
+* Credit Risk Assessment
+* Debt-to-Income Analysis
+* Watchlist Verification
+* Gmail Notifications
+* Google Sheets Integration
+* End-to-End Workflow Automation
 
 ---
 
-# 🏗️ Workflow Architecture
+## 🛠 Technology Stack
+
+| Component            | Technology              |
+| -------------------- | ----------------------- |
+| Workflow Automation  | n8n                     |
+| Data Source          | Google Sheets           |
+| Notification Service | Gmail                   |
+| Risk Engine          | Rule-Based Logic        |
+| Reporting            | Excel                   |
+| Business Rules       | Loan Approval Framework |
+
+---
+
+## 🏗 Workflow Architecture
 
 ```text
 Loan Application
-       │
-       ▼
+        │
+        ▼
 Google Sheets
-       │
-       ▼
-Risk Assessment Engine
-       │
-       ▼
-Decision Rules
-       │
-       ▼
+        │
+        ▼
+Risk Assessment Rules
+        │
+        ▼
+Decision Engine
+        │
+        ▼
 Approved / Review / Rejected
-       │
-       ▼
+        │
+        ▼
 Automated Gmail Notification
 ```
 
 ---
 
-## 🛠️ Technology Stack
-
-| Category | Technology |
-|-----------|------------|
-| Workflow Automation | n8n |
-| Database | Google Sheets |
-| Notifications | Gmail |
-| Risk Assessment | Rule-Based Logic |
-| Reporting | Excel |
-| Decision Engine | Conditional Workflows |
-
----
-
 # 📸 Project Screenshots
 
-## Fraud Deep Dive Dashboard
+## Loan Approval Workflow
 
-![Fraud Deep Dive](./Fraud%20deep%20dive.jpeg)
+![Workflow](workflow.jpeg)
 
-## Live Automation Proof
-
-![Live Automation](./Live%20automation%20proof.jpeg)
-
-## Rule Engine & Automation
-
-![Rule Engine](./Rule%20engine%20and%20automation.jpeg)
 ---
 
-## 📈 Risk Assessment Logic
+## Loan Dataset
 
-### Loan Approved
+![Dataset](dataset.jpeg)
 
-Conditions include:
+---
 
-- Credit Score above threshold
-- Low Debt-to-Income Ratio
-- No significant watchlist matches
-- Affordable loan amount
+## Compliance Review Email
 
-### Review Required
+![Compliance Review](review-email.jpeg)
 
-Triggered when:
+---
 
-- Medium-risk indicators detected
-- Compliance review required
-- Additional verification needed
+## Loan Approval Email
 
-### Loan Rejected
+![Loan Approval](approval-email.jpeg)
 
-Triggered when:
+---
 
-- Low credit score
-- Excessive debt burden
-- High compliance risk
+## 📈 Risk Assessment Criteria
+
+### Approval Rules
+
+* Good Credit Score
+* Low Debt-to-Income Ratio
+* Low Watchlist Risk
+* Acceptable Loan Amount
+
+### Review Required Rules
+
+* Medium Credit Risk
+* Compliance Flags
+* Additional Verification Needed
+
+### Rejection Rules
+
+* Low Credit Score
+* High Debt Burden
+* High Risk Indicators
 
 ---
 
 ## 🔄 Workflow Process
 
 ### Step 1
-Application data is stored in Google Sheets.
+
+Loan applications are stored in Google Sheets.
 
 ### Step 2
-n8n reads each application.
+
+n8n retrieves application records.
 
 ### Step 3
-Risk rules evaluate applicant information.
+
+Risk assessment rules evaluate:
+
+* Credit Score
+* Debt-to-Income Ratio
+* Loan Amount
+* Watchlist Match %
 
 ### Step 4
-Decision engine assigns:
 
-- Approved
-- Review Required
-- Rejected
+Applications are categorized.
 
 ### Step 5
-Automated Gmail notifications are sent.
+
+Automated Gmail notifications are triggered.
 
 ### Step 6
-Results are stored for audit and reporting.
+
+Results are logged for reporting and auditing.
 
 ---
 
 ## 📊 Business Impact
 
-✅ Reduced manual loan review effort
+✅ Reduced manual review effort
 
-✅ Faster processing time
+✅ Faster loan processing
 
-✅ Improved consistency
+✅ Consistent decision-making
 
-✅ Better compliance monitoring
+✅ Automated customer communication
 
-✅ Automated communication
+✅ Improved compliance monitoring
 
-✅ Increased operational efficiency
+✅ Enhanced operational efficiency
 
 ---
 
 ## 🎯 Use Cases
 
-- Loan Approval Automation
-- Credit Risk Assessment
-- Banking Operations
-- Lending Workflows
-- Compliance Screening
-- FinTech Automation
+* Banking Operations
+* Loan Processing
+* Credit Risk Assessment
+* Lending Automation
+* Compliance Monitoring
+* Financial Services Automation
 
 ---
 
@@ -204,23 +181,23 @@ Results are stored for audit and reporting.
 
 ### Finance
 
-- Credit Risk Assessment
-- Loan Underwriting
-- Financial Decision Making
-- Compliance Monitoring
+* Credit Risk Analysis
+* Loan Underwriting Logic
+* Financial Decision Making
+* Compliance Review
 
-### Analytics
+### Data Analytics
 
-- Risk Analysis
-- Decision Modeling
-- Data Validation
+* Risk Assessment
+* Data Validation
+* Business Rules Design
 
 ### Automation
 
-- n8n Workflow Automation
-- Gmail Automation
-- Google Sheets Integration
-- Process Automation
+* n8n Workflow Development
+* Gmail Automation
+* Google Sheets Integration
+* Process Automation
 
 ---
 
