@@ -198,7 +198,7 @@ Results are logged for reporting and auditing.
 * Gmail Automation
 * Google Sheets Integration
 * Process Automation
-
+  
 ---
 
 ## 👩‍💼 Author
