@@ -8,17 +8,17 @@ Loan Risk Assessment • Automated Decision Engine • Gmail Notifications • n
 
 ## 📌 Project Overview
 
-This project automates the loan application review process using a rule-based risk assessment engine built with **n8n**, **Google Sheets**, and **Gmail Automation**.
+AI Loan Approval Automation is a rule-based lending workflow that automatically evaluates loan applications, assigns approval decisions, and sends email notifications using n8n.
 
-The system evaluates loan applications based on financial indicators such as:
+The system analyzes financial and risk indicators such as:
 
-* Annual Income
-* Loan Amount
-* Credit Score
-* Debt-to-Income Ratio
-* Watchlist Match %
+- Annual Income
+- Loan Amount
+- Credit Score
+- Debt-to-Income Ratio
+- Watchlist Match Percentage
 
-Based on predefined rules, applications are automatically classified as:
+Based on predefined business rules, applications are automatically categorized as:
 
 ✅ Approved
 
@@ -26,139 +26,121 @@ Based on predefined rules, applications are automatically classified as:
 
 ❌ Rejected
 
-Automated email notifications are then sent to applicants and reviewers.
-
----
-
-## 🎯 Business Problem
-
-Manual loan reviews are time-consuming and can delay customer onboarding.
-
-Financial institutions need a faster and more consistent method for evaluating loan applications while maintaining risk controls.
-
-This solution automates:
-
-* Risk Assessment
-* Loan Decisioning
-* Compliance Review Triggers
-* Customer Notifications
-
 ---
 
 ## 🚀 Key Features
 
 ### 📊 Automated Risk Assessment
 
-* Credit score evaluation
-* Debt-to-income analysis
-* Watchlist screening
-* Loan affordability checks
+- Credit Score Evaluation
+- Debt-to-Income Analysis
+- Loan Affordability Checks
+- Watchlist Screening
 
 ### ⚡ Decision Engine
 
 Automatically generates:
 
-* Approved
-* Review Required
-* Rejected
+- Approved
+- Review Required
+- Rejected
 
-decisions using predefined business rules.
+decisions using business rules.
 
-### 📧 Gmail Notifications
+### 📧 Automated Gmail Notifications
 
-Automatically sends:
+The workflow automatically sends:
 
-* Loan Approval Emails
-* Compliance Review Requests
-* Loan Rejection Notifications
+- Loan Approval Emails
+- Compliance Review Requests
+- Rejection Notifications
 
 ### 📋 Google Sheets Integration
 
-* Application storage
-* Risk data management
-* Decision tracking
+- Application Data Storage
+- Risk Analysis
+- Decision Tracking
 
-### 🔄 End-to-End Workflow Automation
+### 🔄 Workflow Automation
 
-No manual intervention required after data submission.
+End-to-end automation from application review to email notification.
 
 ---
 
 # 🏗️ Workflow Architecture
 
 ```text
-Loan Application Data
-          │
-          ▼
+Loan Application
+       │
+       ▼
 Google Sheets
-          │
-          ▼
-Risk Assessment Rules
-          │
-          ▼
-Decision Engine
-          │
-          ▼
+       │
+       ▼
+Risk Assessment Engine
+       │
+       ▼
+Decision Rules
+       │
+       ▼
 Approved / Review / Rejected
-          │
-          ▼
-Automated Gmail Notifications
+       │
+       ▼
+Automated Gmail Notification
 ```
 
 ---
 
 ## 🛠️ Technology Stack
 
-| Category            | Technology          |
-| ------------------- | ------------------- |
-| Workflow Automation | n8n                 |
-| Database            | Google Sheets       |
-| Notifications       | Gmail               |
-| Risk Assessment     | Rule-Based Engine   |
-| Reporting           | Excel               |
-| Finance Logic       | Loan Approval Rules |
+| Category | Technology |
+|-----------|------------|
+| Workflow Automation | n8n |
+| Database | Google Sheets |
+| Notifications | Gmail |
+| Risk Assessment | Rule-Based Logic |
+| Reporting | Excel |
+| Decision Engine | Conditional Workflows |
 
 ---
 
 # 📸 Project Screenshots
 
-## Loan Approval Workflow (n8n)
+## 1️⃣ Loan Approval Workflow
 
-![Loan Approval Workflow](Screenshot%20\(7\).png)
+![Loan Approval Workflow](workflow.png)
 
-The workflow automatically reads loan applications from Google Sheets, evaluates risk rules, and routes applications through different decision paths.
-
----
-
-## Loan Application Dataset
-
-![Loan Dataset](Screenshot%20\(9\).png)
-
-The dataset contains:
-
-* Applicant Information
-* Annual Income
-* Loan Amount
-* Credit Score
-* Debt-to-Income Ratio
-* Watchlist Match %
-* Decision Basis
+This n8n workflow reads loan applications, evaluates risk conditions, and routes applications to the correct decision path.
 
 ---
 
-## Compliance Review Notification
+## 2️⃣ Loan Application Dataset
 
-![Compliance Review](Screenshot%20\(10\).png)
+![Loan Dataset](dataset.png)
 
-High-risk applications are automatically flagged and routed for compliance review through Gmail notifications.
+The dataset contains applicant financial information including:
+
+- Annual Income
+- Loan Amount
+- Credit Score
+- Debt-to-Income Ratio
+- Watchlist Match %
+- Decision Basis
 
 ---
 
-## Loan Approval Email
+## 3️⃣ Compliance Review Notification
 
-![Loan Approved](Screenshot%20\(11\)\(1\).png)
+![Compliance Review](compliance-review.png)
 
-Applicants meeting approval criteria automatically receive approval notifications generated by the workflow.
+Applications with compliance concerns are automatically routed for manual review and trigger email notifications.
+
+---
+
+## 4️⃣ Loan Approval Email
+
+![Loan Approved](loan-approved.png)
+
+Approved applicants automatically receive a loan approval email generated by the workflow.
 
 ---
 
@@ -168,58 +150,52 @@ Applicants meeting approval criteria automatically receive approval notification
 
 Conditions include:
 
-* Strong credit score
-* Acceptable debt-to-income ratio
-* Low watchlist risk
-* Affordable loan amount
+- Credit Score above threshold
+- Low Debt-to-Income Ratio
+- No significant watchlist matches
+- Affordable loan amount
 
-### Compliance Review Required
+### Review Required
 
 Triggered when:
 
-* Medium risk indicators detected
-* Watchlist matches identified
-* Additional verification needed
+- Medium-risk indicators detected
+- Compliance review required
+- Additional verification needed
 
 ### Loan Rejected
 
 Triggered when:
 
-* Very low credit score
-* Excessive debt burden
-* High compliance risk
+- Low credit score
+- Excessive debt burden
+- High compliance risk
 
 ---
 
 ## 🔄 Workflow Process
 
 ### Step 1
-
 Application data is stored in Google Sheets.
 
 ### Step 2
-
 n8n reads each application.
 
 ### Step 3
-
-Risk rules evaluate applicant data.
+Risk rules evaluate applicant information.
 
 ### Step 4
-
 Decision engine assigns:
 
-* Approved
-* Review Required
-* Rejected
+- Approved
+- Review Required
+- Rejected
 
 ### Step 5
-
-Automated Gmail notifications are triggered.
+Automated Gmail notifications are sent.
 
 ### Step 6
-
-Results are recorded for reporting and audit purposes.
+Results are stored for audit and reporting.
 
 ---
 
@@ -227,26 +203,26 @@ Results are recorded for reporting and audit purposes.
 
 ✅ Reduced manual loan review effort
 
-✅ Faster application processing
+✅ Faster processing time
 
-✅ Consistent decision making
+✅ Improved consistency
 
-✅ Improved compliance monitoring
+✅ Better compliance monitoring
 
-✅ Automated customer communication
+✅ Automated communication
 
-✅ Better operational efficiency
+✅ Increased operational efficiency
 
 ---
 
 ## 🎯 Use Cases
 
-* Loan Approval Automation
-* Credit Risk Assessment
-* Compliance Screening
-* Retail Banking Operations
-* FinTech Lending
-* Financial Services Automation
+- Loan Approval Automation
+- Credit Risk Assessment
+- Banking Operations
+- Lending Workflows
+- Compliance Screening
+- FinTech Automation
 
 ---
 
@@ -254,23 +230,23 @@ Results are recorded for reporting and audit purposes.
 
 ### Finance
 
-* Credit Risk Assessment
-* Loan Underwriting Logic
-* Compliance Monitoring
-* Financial Decision Making
+- Credit Risk Assessment
+- Loan Underwriting
+- Financial Decision Making
+- Compliance Monitoring
 
 ### Analytics
 
-* Data Validation
-* Risk Analysis
-* Decision Modeling
+- Risk Analysis
+- Decision Modeling
+- Data Validation
 
 ### Automation
 
-* n8n Workflow Automation
-* Gmail Automation
-* Google Sheets Integration
-* Process Automation
+- n8n Workflow Automation
+- Gmail Automation
+- Google Sheets Integration
+- Process Automation
 
 ---
 
@@ -286,4 +262,4 @@ GitHub: https://github.com/klathwalipm22-tech
 
 ## ⭐ Support
 
-If you found this project useful, please consider giving it a Star ⭐
+If you found this project useful, consider giving it a Star ⭐
